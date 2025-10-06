@@ -1,27 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <nav>
-            <p>68070249</p>
-            <h2>ITF Website</h2>
-            <p>Week14</p>
-        </nav>
-        <div class="container">
-            <div>
-                <h2 id="my-title">Welcome To My ITF Website</h2>
-                <img src="chicken.png" width="96" alt="chicken">
-                Enter number: <input type="number" id = "myinput" value="0">
-                <button onclick="add()">+1</button>
-            </div>
-            <div>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ITF Simple Bank</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav>
+      <p>68070249</p>
+      <h2>ITF Website</h2>
+      <p>Week 14</p>
+    </nav>
+
+    <header class="header">
+    <img src="adore.png" width="96" alt="chicken">
+      <div>
+        <h1 id="main-title">ITF Simple Bank</h1>
+        <h3 id="subtitle">Welcome to my first HTML + CSS + JS website!</h3>
+      </div>
+    </header>
+
+    <section class="output-section">
+      <textarea id="output-box" readonly></textarea>
+    </section>
+
+    <main class="content">
+      <section class="account">
+        <h2>Account Overview</h2>
+
+        <div class="info-row">
+          <img src="ITFLab_res14/user.png" alt="Account" />
+          <div>
+            <h3>Account Information</h3>
+            <p style="padding-top: 10px">Name: Natchanon Sangsri</p>
+            <p style="padding-top: 10px">Type: Savings Account</p>
+          </div>
         </div>
-    </body>
+
+        <div class="info-row">
+          <img src="ITFLab_res14/briefcase.png" alt="Balance" />
+          <div>
+            <h3>Balance Information</h3>
+            <div class="flex">
+              <p>Current account</p>
+              <input type="number" class="input-box" id="Currentbox1" />
+            </div>
+            <p>balance:</p>
+            <div class="flex">
+              <p>Current cash</p>
+              <input type="number" class="input-box" id="Currentbox2" />
+            </div>
+            <p>balance:</p>
+            <button onclick="Change()">Change</button>
+          </div>
+        </div>
+
+        <div class="info-row">
+          <img src="ITFLab_res14/toolbox.png" alt="Bank Operation" />
+          <div>
+            <h3>Bank Operation</h3>
+            <form>
+              <select name="operation" id="BankOps">
+                <option value="Deposit">Deposit</option>
+                <option value="Withdraw">Withdraw</option>
+              </select>
+              <input type="number" class="input-box" id="BankInput" />
+              <br /><br />
+              <button type="button" onclick="Process()">Process</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="financial">
+        <h2>Financial Tools</h2>
+        <div class="info-row">
+          <img src="ITFLab_res14/coins.png" alt="Currency" />
+          <div>
+            <h3>Currency Converter</h3>
+            <div class="flex">
+              <p>Input balance:</p>
+              <input type="number" class="input-box" id="inputmoney" />
+            </div>
+            <div class="flex">
+              <p>Output balance:</p>
+              <input readonly type="number" class="input-box" id="outputmoney"/>
+            </div>
+            <div class="flex">
+              <p>Input currency:</p>
+              <select name="currency" class="currenC" id="ConvertM">
+                <option value="USD">USD</option>
+                <option value="THB">THB</option>
+              </select>
+              <button type="button" onclick="Convert()">Convert</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
     <script src="script.js"></script>
+  </body>
 </html>
